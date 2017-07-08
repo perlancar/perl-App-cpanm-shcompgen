@@ -13,7 +13,7 @@ use File::Which;
 my $cpanm_path = which("cpanm") or die "Can't find cpanm in PATH\n";
 
 my @cmd = (
-    $^X, "-MModule::Load::On::INIT=App::shcompgen::Script::Patch::RunShcompgen",
+    $^X, "-MModule::Load::In::INIT=App::cpanminus::script::Patch::RunShcompgen=-warn_target_loaded;0",
     $cpanm_path,
     @ARGV,
 );
@@ -43,7 +43,7 @@ L<cpanm-shcompgen> is a simple wrapper over L<cpanm>. This command:
 
 is equivalent to:
 
- % perl -MModule::Load::On::INIT=App::cpanminus::Script::Patch::RunShcompgen cpanm -n App::PMUtils
+ % perl -MModule::Load::In::INIT=App::cpanminus::script::Patch::RunShcompgen cpanm -n App::PMUtils
 
 That is, it will cause B<cpanm> to execute L<shcompgen> (C<shcomgen generate
 ...>) for all the installed scripts in the distribution. This means, shell tab
