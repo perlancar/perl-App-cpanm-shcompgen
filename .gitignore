@@ -1,0 +1,4 @@
+App-cpanm-shcompgen-*
+.build
+*~
+nytprof*
