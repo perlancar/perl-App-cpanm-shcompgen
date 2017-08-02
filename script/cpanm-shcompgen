@@ -45,9 +45,9 @@ is equivalent to:
 
  % perl -MModule::Load::In::INIT=App::cpanminus::script::Patch::RunShcompgen cpanm -n App::PMUtils
 
-That is, it will cause B<cpanm> to execute L<shcompgen> (C<shcomgen generate
-...>) for all the installed scripts in the distribution. This means, shell tab
-completion will be activated immediately after installation.
+That is, it will cause B<cpanm> to execute L<shcompgen> (C<shcompgen generate
+--replace ...>) for all the installed scripts in the distribution. This means,
+shell tab completion will be activated immediately after installation.
 
 
 =head1 SEE ALSO
