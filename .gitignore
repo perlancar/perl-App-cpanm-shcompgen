@@ -2,3 +2,4 @@ App-cpanm-shcompgen-*
 .build
 *~
 nytprof*
+.DS_Store
